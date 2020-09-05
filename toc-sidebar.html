@@ -35,7 +35,7 @@ $endif$
     <![endif]-->
     <style type="text/css">code{white-space: pre;}</style>
 $if(toc)$
-    <style type="text/css">.sidebar ul{padding-left: 10px;}</style>
+    <style type="text/css">.sidebar ul{padding-left: 5px; list-style-type: none; font-size: 16px;}</style>
 $endif$
 $if(quotes)$
     <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
@@ -101,16 +101,16 @@ $if(toc)$
           </ul>-->
           $toc$
         </div>
-        <div class="col-md-offset-1 col-sm-12 col-md-12 main">
+        <div class="col-md-offset-2 col-sm-10 col-md-10 main">
 $else$
         <div class="col-sm-12 main">
 $endif$
-        
+
 $body$
         </div>
       </div>
     </div>
-    
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -121,14 +121,14 @@ $body$
     <script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
     <script>
         //document.getElementById('sidebar').getElementsByTagName('ul')[0].className += "nav nav-sidebar";
-        
+
         /* ajust the height when click the toc
            the code is from https://github.com/twbs/bootstrap/issues/1768
         */
         var shiftWindow = function() { scrollBy(0, -50) };
         window.addEventListener("hashchange", shiftWindow);
         function load() { if (window.location.hash) shiftWindow(); }
-        
+
         /*add Bootstrap styles to tables*/
         var tables = document.getElementsByTagName("table");
         for(var i = 0; i < tables.length; ++i){
